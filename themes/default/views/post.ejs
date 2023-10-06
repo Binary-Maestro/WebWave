@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link
+      rel="stylesheet"
+      href="../../<%= theme %>/views/assets/css/styles.css"
+    />
+  </head>
+  <body>
+    <%- include('parts/post_parts/post_header.ejs') %>
+    <h1><%= post.post_title %></h1>
+    <%- post.post_content %>
+  </body>
+</html>

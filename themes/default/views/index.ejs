@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <!-- Include your CSS stylesheets here -->
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1><%= title %></h1>
+      <nav>
+        <ul>
+          <% pages.forEach((page)=> { %>
+          <li><a href="<%= page.slug %>"> <%= page.title %> </a></li>
+          <% }); %>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Welcome to <%= title %></h2>
+        <p>This is the home page of our website.</p>
+      </section>
+
+      <!-- You can insert dynamic content here using EJS tags -->
+      <!-- Display data from plugins -->
+    </main>
+
+    <!-- Include your JavaScript files here -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>

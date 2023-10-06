@@ -1,0 +1,12 @@
+<header>
+  <h1><%= post.post_title %></h1>
+  <nav>
+    <ul>
+      <% pages.forEach((page)=> { %> <% if(page.type == "page") { %>
+      <li><a href="<%= page.slug %>"> <%= page.title %> </a></li>
+      <% } else if(page.type == "link") { %>
+      <li><a href="<%= page.slug %>" target="_self"><%= page.title %></a></li>
+      <% } %> <% }); %>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,62 @@
+<!-- views/page.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="images/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <%- include('parts/header.ejs') %>
+    <main>
+      <div class="content">
+        <h1><%= pageTitle %></h1>
+        <% if(enablePosts) { %> <% posts.forEach((post)=> { %>
+        <div class="post" id="<%= post.post_id %>">
+          <% if(post.post_featured_image != "" || post.post_featured_image !=
+          undefined) { %>
+          <a href="/post/<%= post.post_title %>"
+            ><div
+              class="featured_image"
+              img-url="<%= post.post_featured_image %>"
+            ></div
+          ></a>
+          <% } %>
+          <div class="post_title">
+            <a href="/post/<%= post.post_title %>"><%= post.post_title %></a>
+          </div>
+          <div class="post_desc">
+            <%= limitWords(removeHtmlTags(post.post_content),10) %>
+          </div>
+          <small class="date" dateformat="<%= post.post_date %>"></small>
+        </div>
+        <% }); %> <% } %> <%- content %>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>

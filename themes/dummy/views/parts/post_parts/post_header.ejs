@@ -1,0 +1,17 @@
+<header>
+  <nav class="navigation">
+    <a href="/"><div class="logo"></div></a>
+    <ul class="main_menu">
+      <% pages.forEach((page)=> { %> <% if(page.type == "page") { %>
+      <li class="menu_item">
+        <a href="<%= page.slug %>"> <%= page.title %> </a>
+      </li>
+      <% } else if(page.type == "link") { %>
+      <li class="menu_item">
+        <a href="<%= page.slug %>" target="_self"><%= page.title %></a>
+      </li>
+      <% } %> <% }); %>
+      <button class="header_btn">Get WebWave</button>
+    </ul>
+  </nav>
+</header>

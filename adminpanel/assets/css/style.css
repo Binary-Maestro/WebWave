@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Merriweather+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+body,
+html {
+  background-color: #444;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+* {
+  font-family: "Merriweather Sans", sans-serif;
+}
+.frmlogin {
+  background-color: #333;
+  height: fit-content;
+  width: 380px;
+  border-radius: 10px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  margin: auto;
+  padding: 40px;
+}
+.logo_admin {
+  left: 0;
+  right: 0;
+  bottom: 250px;
+  height: 150px;
+  width: 150px;
+  top: 0;
+  line-height: 150px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(
+    180deg,
+    rgba(133, 202, 255, 1) 0%,
+    rgba(43, 173, 255, 1) 100%
+  );
+  text-shadow: 4px 4px 0px #68686850;
+  border: 6px solid #333;
+  color: white;
+  margin: auto;
+  position: absolute;
+  z-index: 1;
+  font-size: 50px;
+  font-family: "Cormorant Garamond", serif;
+}
+.ww-text {
+  background-color: #444;
+  border: 2px solid #111;
+  outline: none;
+  display: block;
+  height: 40px;
+  border-radius: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px;
+  padding-left: 30px;
+  width: 100%;
+  margin-top: 5px;
+}
+.ww-text:focus {
+  background-color: #555;
+}
+.circularbtn {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #111;
+  border: 6px solid #333;
+  color: white;
+  outline: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 10px;
+}
+.circularbtn:hover {
+  background-color: #222;
+  border: 6px solid #333;
+  cursor: pointer;
+}
+.input-icon {
+  position: relative;
+}
+
+.input-icon i {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Adjust the left position as needed */
+  transform: translateY(-50%);
+}
+.absolute {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  margin-left: 10px;
+  position: absolute;
+}
+.bigger {
+  font-size: 20px;
+}
+.head {
+  width: 100%;
+  height: 105px;
+  position: fixed;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  z-index: 99999;
+}
+.adminItem a:hover {
+  cursor: pointer;
+}
+.adminItem a {
+  border-radius: 10px;
+  list-style: none;
+  font-size: 18px;
+  color: white;
+  display: inline-block;
+  margin-right: 10px;
+  box-sizing: border-box;
+  padding: 20px;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative; /* Add this for the pseudo-element */
+}
+a {
+  text-decoration: none;
+}
+.adminItem:hover {
+  cursor: pointer;
+}
+.adminItem {
+  border-radius: 10px;
+  list-style: none;
+  font-size: 18px;
+  color: white;
+  display: inline-block;
+  margin-right: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative; /* Add this for the pseudo-element */
+}
+
+/* Create a pseudo-element for the neon border */
+.adminItem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust the distance of the border from the text */
+  width: 100%;
+  height: 2px; /* Adjust the thickness of the border */
+  background-color: white; /* Neon green color */
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Add a transition for smoother effect */
+}
+
+/* Add the hover effect */
+.adminItem:hover::before {
+  opacity: 1;
+}
+.container {
+  padding-top: 150px;
+  height: calc(100% - 150px);
+  width: 100%;
+}
+
+/* Style for the submenu */
+.submenu {
+  width: 180px;
+  display: none; /* Hide the submenu by default */
+  position: absolute;
+  background-color: #333;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+}
+
+.submenu li {
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+}
+
+/* Style for submenu items on hover */
+.adminItem.subitems:hover .submenu {
+  display: block; /* Show the submenu on hover */
+}
+
+/* Style for submenu item links */
+.submenu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.submenu a:hover {
+  background-color: #444;
+  border-radius: 10px;
+}
+.smalltiny {
+  font-size: 15px;
+  margin-left: 10px;
+  color: lightskyblue;
+}
+.left {
+  float: left;
+}
+.r-left {
+  margin-right: 10px;
+}
+#wysiwyg {
+  background-color: #777 !important;
+  border-radius: 10px;
+}
+.ce-block__content {
+  border: 1px dashed black;
+  margin-bottom: 10px;
+}
+.codex-editor__redactor {
+  padding: 40px;
+}
+.post_title {
+  height: 40px;
+  border: 2px dashed black;
+  border-radius: 10px;
+  background-color: transparent;
+  color: black;
+  outline: none;
+  width: calc(100% - 20px);
+  text-align: center;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  box-sizing: border-box;
+}
+.admin_btn {
+  margin-top: 10px;
+  background-color: lightblue;
+  color: black;
+  border-radius: 5px;
+  outline: none;
+  border: 0;
+  padding: 10px 40px;
+  cursor: pointer;
+}
+.rbtn {
+  float: right;
+  margin-right: 10px;
+}
+.lbtn {
+  float: left;
+  margin-left: 10px;
+}
+.admin_btn:hover {
+  background-color: rgb(200, 234, 245);
+}

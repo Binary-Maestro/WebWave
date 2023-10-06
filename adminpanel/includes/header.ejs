@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/ww-admin/assets/css/style.css" />
+    <title>WebWave - Administration Panel</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/ww-admin/assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/ww-admin/assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/ww-admin/assets/images/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="/ww-admin/assets/images/favicon/site.webmanifest"
+    />
+    <link
+      rel="mask-icon"
+      href="/ww-admin/assets/images/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <script
+      src="https://kit.fontawesome.com/675f049390.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+  <% if(menuVisible) { %> <%- include("adminmenu") %> <% } %>
+  <body>

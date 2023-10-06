@@ -1,0 +1,31 @@
+<!-- views/page.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <link
+      rel="stylesheet"
+      href="../../<%= theme %>/views/assets/css/styles.css"
+    />
+  </head>
+  <body>
+    <%- include('parts/header.ejs') %>
+    <main>
+      <div class="content">
+        <% if(enablePosts) { %> <% posts.forEach((post)=> { %>
+        <div class="post" id="<%= post.post_id %>">
+          <div class="post_title">
+            <a href="/post/<%= post.post_title %>"><%= post.post_title %></a>
+          </div>
+          <div class="post_desc">
+            <%= limitWords(removeHtmlTags(post.post_content),10) %>
+          </div>
+        </div>
+        <% }); %> <% } %>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
